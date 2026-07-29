@@ -818,7 +818,9 @@ def main():
     sys.stdout.reconfigure(encoding='utf-8', errors='replace')
     print(f'output.html 생성 완료')
     print(f'  -> {abs_path}')
-    print(f'  file:///{abs_path.replace(os.sep, "/")}')
+
+    import webbrowser
+    webbrowser.open(f'file:///{abs_path.replace(os.sep, "/")}')
 
 
 if __name__ == '__main__':
